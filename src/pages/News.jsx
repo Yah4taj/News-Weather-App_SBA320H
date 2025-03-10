@@ -5,7 +5,7 @@ const News = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const url = `https://newsdata.io/api/1/latest?apikey=${import.meta.env.VITE_NEWSDATA_API_KEY}&q=UnitedStates`;
+  const url = `https://newsdata.io/api/1/latest?apikey=${import.meta.env.VITE_NEWSDATA_API_KEY}&q=NewYork&language=en`;
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -24,11 +24,11 @@ const News = () => {
     };
 
     fetchNews();
-  }, [url]); // Run effect when `url` changes
+  }, [url]); 
 
   return (
     <div className="p-4">
-      <h1 className="text-2l font-bold mb-4">Latest News</h1>
+      <h1 className="text-2l font-bold mb-4">Latest Tri-State News</h1>
       
       {loading && <p>Loading news...</p>}
       {error && <p className="text-red-500">Error: {error}</p>}
