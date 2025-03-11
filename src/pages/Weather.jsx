@@ -41,12 +41,19 @@ const Weather = () => {
       {error && <p className="text-center text-red-500">Error: {error}</p>}
 
       {weather && (
-        <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+        <div className="max-w-md mx-auto bg-gray p-6 rounded-lg shadow-md">
           <h2 className="text-xl font-semibold">{weather.WeatherText}</h2>
           <p className="text-gray-500">Temperature: {weather.Temperature.Imperial.Value}°F</p>
           
         </div>
       )}
+      <div className="flex justify-center mt-6">
+        <img
+        src="https://t3.ftcdn.net/jpg/00/93/79/48/240_F_93794803_icIrHOnVcRELOdJ0RSwogA4TquZpMegv.jpg"
+        alt="NYC Skyline"
+        className= "w-full max-w-2xl rounded-lg shadow-lg"
+        />
+      </div>
     </div>
   );
 };

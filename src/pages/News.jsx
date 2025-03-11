@@ -39,8 +39,11 @@ const News = () => {
         {articles.map((article, index) => (
           <div key={index} className="p-4 border rounded-lg shadow-md">
             <h2 className="text-lg font-semibold">{article.title}</h2>
-            <p className="text-sm text-gray-600">{article.source_id}</p>
-            <p className="mt-2">{article.description}</p>
+            <p className="text-sm text-gray-600">{article.source_id.toUpperCase()}</p>
+            <p className="text-sm text-gray-600">{article.description.length > 100
+              ?`${article.description.substring(0,100)}...`
+              : article.description}
+              </p>
             <a
               href={article.link}
               target="_blank"
