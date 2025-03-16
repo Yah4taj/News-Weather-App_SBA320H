@@ -1,8 +1,10 @@
 
-
 * HTML, Javascript, CSS, React
-** I created a React web application project that displays NYC current weather ( obtained from Accuweather API) and current TriState news (obtained from NewsData API). The approach I took was to create three pages utilizing routes (weather, news and main) and set one component for the Navbar to display the News and Weather links. 
-***
+** I created a React web application project that displays NYC current weather ( obtained from Accuweather API) and current TriState news (obtained from NewsData API). The approach I took was to create three pages utilizing routes (weather, news and main) and set one component for the Navbar to display the News and Weather links.
+
+  *******    https://nyctri-newsweather.netlify.app/   ********    
+
+
 **** Initially, I wanted to display the weather for the top 50 cities and the national news. However, the location key and parameter of top 50 cities did not yield the desired data thus I opted to streamline data to NYC weather. This change informed my decision to remain in alignment nfor the news page thus the reason for Tristate news data.
 
 
