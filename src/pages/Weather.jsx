@@ -5,7 +5,7 @@ const Weather = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const locationUrl = `http://dataservice.accuweather.com/locations/v1/search?q=manhattan&apikey=${import.meta.env.VITE_ACCUWEATHER_API_KEY}`;
+  const locationUrl = `https://dataservice.accuweather.com/locations/v1/search?q=manhattan&apikey=${import.meta.env.VITE_ACCUWEATHER_API_KEY}`;
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -18,7 +18,7 @@ const Weather = () => {
         if (!locationKey) throw new Error("Location key not found");
 
         // Get Weather Data
-        const weatherUrl = `http://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${import.meta.env.VITE_ACCUWEATHER_API_KEY}`;
+        const weatherUrl = `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${import.meta.env.VITE_ACCUWEATHER_API_KEY}`;
         const weatherResponse = await fetch(weatherUrl);
         const weatherData = await weatherResponse.json();
         setWeather(weatherData[0]); // Store weather data
